@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodGroup.Views.FoodTabPage">
+    <ContentPage.Content>
+        <ListView x:Name="mealsListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+
+                            <!-- I will not create full xaml view, that is not a point of 
+                                 this example I want to show you grouping later you can play with 
+                                 xaml
+                            -->
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Description}" />
+                            <Label Text="{Binding CostPrice}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
