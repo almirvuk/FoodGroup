@@ -2,7 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodGroup.Views.FoodTabPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search" Clicked="Search"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
+
+        <StackLayout>
+
+            <StackLayout x:Name="stackLayoutShowHide" IsVisible="False">
+                <Entry Placeholder="Your text to search" TextChanged="searchChanged" />
+            </StackLayout>
+            
+        
         <ListView x:Name="mealsListView" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -21,5 +34,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
